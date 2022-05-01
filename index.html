@@ -3,16 +3,30 @@
 
 <head>
   <meta charset="utf-8">
+  <!-- files imported from library -->
+  <link rel="stylesheet" href="./Libraries/carousel.min.css" />
+  <script src="./Libraries/carousel.min.js"></script>
+
+  <!-- Stylesheets and js files -->
   <link rel="stylesheet" href="styles.css">
+  <script defer src="main.js" charset="utf-8"></script>
+  <script src="scream_news_generator.js" charset="utf-8"></script>
+  <script src="countdown.js" charset="utf-8"></script>
+  <script defer src="carousel.js" charset="utf-8"></script>
+
+  <!-- Fonts from Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300&display=swap" rel="stylesheet">
   <title>Final Girl</title>
 </head>
 
 <body>
   <nav>
-    <div class="container">
+    <div class="headercontainer">
       <h1 class="logo"><a href="index.html">Final Girl</a></h1>
 
-      <div class="nav_menu">
+      <div class="navmenu">
         <a href="movies.html">Movies</a>
         <a href="characters.html">Characters</a>
         <a href="quiz.html">Quiz</a>
@@ -26,62 +40,86 @@
       </button>
 
     </div>
-    <script src="main.js" charset="utf-8"></script>
+
   </nav>
 
   <main>
-
-    <div class="background_img">
-      <div class="message_logo">
+    <div class="herocontainer container">
+      <div class="spookyquotecontainer">
         <h1 class="spookyquote">What's your favorite scary movie?</h1>
       </div>
       <div class="countdown">
-        <h1 class="spookyquote" >Time until Scream 6</h1>
+        <h1 class="spookyquote">Time until Scream 6</h1>
         <h1 id="countdowntimer"></h1>
       </div>
     </div>
 
-    <div class="welcoming">
-      <h3>Welcome to Woodsboro!</h3>
-      <p>What looks like your average, peaceful surburbia is actually something far more sinister. The small town in California
-        has become a place full of murder and death. Will you be smart enough to survive?What looks like your average, peaceful surburbia is actually something far more sinister. The small town in California
-        has become a place full of murder and death. Will you be smart enough to survive?What looks like your average, peaceful surburbia is actually something far more sinister. The small town in California
-        has become a place full of murder and death. Will you be smart enough to survive?What looks like your average, peaceful surburbia is actually something far more sinister. The small town in California
-        has become a place full of murder and death. Will you be smart enough to survive?What looks like your average, peaceful surburbia is actually something far more sinister. The small town in California
-        has become a place full of murder and death. Will you be smart enough to survive?What looks like your average, peaceful surburbia is actually something far more sinister. The small town in California
-        has become a place full of murder and death. Will you be smart enough to survive?What looks like your average, peaceful surburbia is actually something far more sinister. The small town in California
-        has become a place full of murder and death. Will you be smart enough to survive?</p>
+    <div class="wrapper1 scream1">
+      <div class="columns">
+        <div class="col col-left">
+        <h2>Welcome to Woodsboro!</h2>
+          <p>Once a quiet town, Woodsboro is now the center of multiple murders. Do you have what it takes to survive? </p>
+        </div>
 
-
-    </div>
-    <div class="movies">
-      <a href="movies.html" id="movie1"><img src="./images/scream1.jpg" alt=""></a>
-      <a href="movies.html" id="movie2"><img src="./images/scream 2.jpg" alt=""></a>
-      <a href="movies.html" id="movie3"><img src="./images/Scream3Poster.jpg" alt=""></a>
-      <a href="movies.html" id="movie4"><img src="./images/Scream4Poster.jpg" alt=""></a>
-      <a href="movies.html" id="movie5"><img src="./images/Scream5Poster.jpg" alt=""></a>
-    </div>
-
-    <div class="contact">
-      <h1>Contact form</h1>
-
-      <div class="contactform">
-        <form action="/action_page.php">
-          <label for="firstname">First Name</label>
-          <input type="text" id="firstname" name="firstname" placeholder="Your name">
-          <label for="lastname">Last Name</label>
-          <input type="text" id="lastname" name="lastname" placeholder="Your last name">
-          <label for="email">Email</label>
-          <input type="text" placeholder="Enter email" name="email">
-          <label for="subject">Subject</label>
-          <textarea id="subject" name="subject" placeholder="Leave me a message"></textarea>
-          <input type="submit" value="Submit">
-        </form>
+        <div class="col col-right">
+          <div class="carouselimages js-Carousel" id="carousel">
+            <ul>
+              <li> <img src="./images/screamcast1.png" alt=""> </li>
+              <li> <img src="./images/woodsborodewey.jpg" alt=""> </li>
+              <li> <img src="./images/woodsborohigh.jpg" alt=""> </li>
+            </ul>
+          </div>
+        </div>
       </div>
 
     </div>
 
+    <div class="container">
+        <h2>Scream Movies</h2>
+      <div class="movies">
+        <a href="movies.html#movie1" id="movie1"><img src="./images/scream1.jpg" alt="Scream 1 film poster"></a>
+        <a href="movies.html#movie2" id="movie2"><img src="./images/scream 2.jpg" alt="Scream 2 film poster"></a>
+        <a href="movies.html#movie3" id="movie3"><img src="./images/Scream3Poster.jpg" alt="Scream 3 film poster"></a>
+        <a href="movies.html#movie4" id="movie4"><img src="./images/Scream4Poster.jpg" alt="Scream 4 film poster"></a>
+        <a href="movies.html#movie5" id="movie5"><img src="./images/Scream5Poster.jpg" alt="Scream 5 film poster"></a>
+      </div>
+
+    </div>
+    <div class="wrapper1">
+      <h2>Related News</h2>
+      <div class="news">
+      </div>
+    </div>
+    <div class="contactcontainer wrapper1">
+      <div class="columns">
+        <div class="col col-50">
+        <h2>Contact form</h2>
+          <form id="contactform">
+            <label class="formlabel" for="firstname">First Name</label>
+            <input class="forminput" type="text" id="firstname" name="firstname" placeholder="Your first name">
+            <label class="formlabel" for="lastname">Last Name</label>
+            <input class="forminput" type="text" id="lastname" name="lastname" placeholder="Your last name">
+            <label class="formlabel" for="email">Email</label>
+            <input class="forminput" type="text" placeholder="Enter email" name="email">
+            <label class="formlabel" for="subject">Message</label>
+            <textarea class="forminput" name="subject" placeholder="Tell me your favorite scary movie."></textarea>
+            <div class="submitbuttoncontainer">
+              <input class="submitbutton" type="submit" value="Submit">
+              <div id="thankyoumessage" class="hide">Thank you!</div>
+            </div>
+          </form>
+
+      </div>
+      <div class="col col-50 aboutus">
+        <h2>About</h2>
+        <p>Final Girl is a fan site about the popular horror franchise <em>Scream</em>. As a life long horror geek, the <em>Scream</em> movies have been some of my favourite films of all time. With this website, I hope to showcase my design skills and my love for the franchise as a whole.
+          <br>
+          <br> What makes <em>Scream</em> so amazing is the fact that it has self-aware characters who understand common tropes and horror cliches from the original slashers. Best of luck, and I hope you will survive my site. </p>
+      </div>
+    </div>
+
   </main>
+
   <footer>
     <h5>Copyright © 2022 Tyler Lerch. All rights reserved.</h5>
   </footer>

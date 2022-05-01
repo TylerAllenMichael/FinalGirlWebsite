@@ -1,3 +1,7 @@
+/* Final Girl Website - Tyler */
+
+/* Import custom fonts */
+
 @font-face {
   font-family: 'Scream';
   src: url(fonts/scream-real.regular.ttf);
@@ -8,6 +12,8 @@
   src: url(fonts/screamfont.TTF);
 }
 
+/* Universal styles */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -16,41 +22,85 @@
 
 body {
   background: white;
+
 }
 
-/* General styling for headings and paragraphs */
+main {
+  margin-top: 86.4px;
+}
 
-.spookyquote {
+h1 {
   font-family: 'Scream';
-  color: white;
-  letter-spacing: 4px;
-  font-weight: 100;
 }
 
 h1 a:hover {
   color: #660000;
 }
 
-a {
-  font-family: 'Scream';
-  letter-spacing: 4px;
-  text-decoration: none;
-  color: white;
+h1, h5 {
+  font-weight: 100;
 }
 
+/* .screamheaders {
+  font-weight: 100;
+  font-family: 'Scream';
+  font-size: 32px;
+} */
 
+h2 {
+  font-weight: 100;
+  font-family: 'Scream';
+  font-size: 32px;
+}
+
+h3 {
+  font-weight: 100;
+  font-family: 'Scream';
+  font-size: 26px;
+}
+
+p{
+  font-size: 20px;
+  font-family: 'Heebo';
+}
+
+em {
+  font-weight: bold;
+}
+
+.pageheaders {
+  font-size: 45px;
+}
+
+.scream2, .scream4 {
+  background: lightgrey;
+}
+
+.twocolumncontainer {
+  display: flex;
+  width: 100%;
+}
+
+.colnew {
+    flex: 50%;
+    max-width: 50%;
+}
+
+.twocolumn {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+}
+
+.twocolumn:nth-child(2) {
+  padding-left: 90px;
+}
 
 .container {
-  /* max-width: 1280px; */
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  padding: 50px 120px;
 }
 
-.logo{
-  font-weight:100;
-}
+/*Header styling*/
 
 nav {
   position: fixed;
@@ -64,34 +114,43 @@ nav {
   border-bottom: 5px solid #660000;
 }
 
-.nav_menu a:hover {
-  color: #660000;
-}
-
-.countdown {
+.headercontainer {
+  margin: 0 auto;
   display: flex;
-  justify-content: flex-end;
-  flex-direction: column;
-  position: absolute;
-  right: 50px;
-  bottom: 130px;
-
-}
-
-#countdowntimer {
-  display: flex;
-  justify-content: center;
   align-items: center;
-  color: white;
-  font-family: 'Scream2';
-  font-weight: 100;
-  height: 100px;
-  width: 100%;
-  background-color: #660000;
+  justify-content: space-between;
 }
 
-main {
-  margin-top: 86.4px;
+.headercontainer a {
+  font-family: 'Scream';
+  letter-spacing: 4px;
+  text-decoration: none;
+  color: white;
+}
+
+.logo{
+  font-weight:100;
+}
+
+.navmenu {
+  display: none;
+  justify-content: flex-end;
+  margin: 0px -16px;
+
+}
+
+.navmenu a {
+  border-radius: 99px;
+  color: white;
+  /* margin: 0 16px; */
+  font-weight: 300;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: .3s;
+}
+
+.navmenu a:hover {
+  color: #660000;
 }
 
 .hamburger {
@@ -99,12 +158,10 @@ main {
   position: relative;
   z-index: 1;
   user-select: none;
-
   border: none;
   outline: none;
   background: none;
   cursor: pointer;
-
 }
 
 .hamburger span {
@@ -115,11 +172,8 @@ main {
   height: 4px;
   margin-bottom: 5px;
   position: relative;
-
   z-index: 1;
-
   transform-origin: 0 0;
-
   transition: .3s;
 }
 
@@ -145,33 +199,22 @@ main {
   background-color: #660000;
 }
 
-.nav_menu {
-  display: none;
-  justify-content: flex-end;
-  margin: 0px -16px;
-
-}
-
-.nav_menu a {
-  border-radius: 99px;
-  color: white;
-  /* margin: 0 16px; */
-  font-weight: 300;
-  padding: 8px 16px;
-  text-decoration: none;
-  transition: .3s;
-}
-
 @media (min-width: 1100px) {
   .hamburger {
     display: none;
   }
-  .nav_menu {
+  .navmenu {
     display: block;
   }
 }
 
-.background_img {
+.hide {
+  display: none;
+}
+
+/* Hero container css */
+
+.herocontainer {
   background-image: url('./images/mask.png');
   background-position: center;
   background-repeat: no-repeat;
@@ -180,23 +223,74 @@ main {
   position: relative;
 }
 
-.message_logo {
+.spookyquotecontainer {
   align-items: center;
   display: flex;
   height: 90%;
-  margin-left: 100px;
   text-align: center;
 }
 
-.message_logo h1 {
+.spookyquotecontainer h1 {
   width: 350px;
 }
 
-.welcoming {
+.spookyquote {
   font-family: 'Scream';
-  margin: 100px;
-  padding-left: 90px;
-  padding-right: 90px;
+  color: white;
+  letter-spacing: 4px;
+  font-weight: 100;
+}
+
+.countdown {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  position: absolute;
+  right: 120px;
+  bottom: 130px;
+}
+
+#countdowntimer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: 'Scream2';
+  font-weight: 100;
+  height: 100px;
+  width: 100%;
+  background-color: #660000;
+}
+
+/* Welcome container css */
+.pagebanners {
+  background-color: black;
+  text-align: center;
+  padding: 7rem;
+  height: 300px;
+  color: white;
+  border-bottom: 5px solid #660000;
+}
+
+/* Welcome container css */
+.welcomemessage {
+  font-family:'Scream';
+  display: flex;
+  justify-content: center;
+}
+
+.carouselimages, .carouselimages ul, .carouselimages img {
+  height: 480px;
+  width: 600px;
+}
+
+/* Movies container css */
+.movies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 10px;
+  filter: drop-shadow(.75em .75em .5em);
 }
 
 .movies a img {
@@ -205,77 +299,107 @@ main {
   margin: 2px;
 }
 
-.movies {
+#movie1:hover, #movie2:hover, #movie3:hover, #movie4:hover, #movie5:hover {
+  transform: scale(1.15);
+  transition: 1s;
+}
+
+/* News container css */
+.news {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  margin-top: 100px;
-  padding-left: 90px;
-  padding-right: 90px;
-  filter: drop-shadow(.75em .75em .5em);
 }
 
-#movie1:hover {
-  transform: scale(1.15);
-  transition: 1s;
+.story {
+  display: flex;
+  flex-direction: column;
+  width: 33.3%;
+  margin-bottom: 50px;
 }
 
-#movie2:hover {
-  transform: scale(1.15);
-  transition: 1s;
-}
-#movie3:hover {
-  transform: scale(1.15);
-  transition: 1s;
-}
-#movie4:hover {
-  transform: scale(1.15);
-  transition: 1s;
-}
-#movie5:hover {
-  transform: scale(1.15);
-  transition: 1s;
+/* 1st, 4th story should be on the left,
+   2nd, 5th story should be in the center,
+   3rd, 6th story should be on the right
+   This will give us a feeling of space between them */
+.story:nth-child(3n+1) {
+  align-items: flex-start;
 }
 
-h1 {
-  text-align: center;
+.story:nth-child(3n+2) {
+  align-items: center;
 }
 
-label {
-  color: darkgrey;
+.story:nth-child(3n) {
+  align-items: flex-end;
+}
+
+.story-link {
+  color: black;
+  text-decoration: none;
+  width: 300px;
+}
+
+.story-img {
+  height: 190px;
+  width: 300px;
+}
+
+.story-img:hover {
+  opacity: 75%;
+}
+
+.story-name {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+.story-source {
+  font-size: 12px;
+  width: 100%;
+}
+
+/* Contact container CSS */
+.contactcontainer {
+  background-color: lightgrey;
+  font-size: 16px;
+}
+
+.aboutus p {
+  font-size: 25px;
+}
+
+.formlabel {
+  color: black;
   font-size: 18px;
   font-weight: 600;
+  font-family: 'Heebo';
 }
 
-
-input[type="text"],
-select,
-textarea {
-  border: 1px solid #ccc;
+.forminput {
+  border: 1px solid lightgrey;
   border-radius: 5px;
   box-sizing: border-box;
-  font-family: Poppins;
-  font-size: 16px;
-  margin-top: 20px;
+  margin-top: 4px;
   margin-bottom: 20px;
   padding: 15px;
   resize: vertical;
   width: 100%;
+  font-family: 'Heebo', sans-serif;
 }
 
-input[type="submit"] {
-  background-color: white;
+input[type="radio" i] {
 
-  border-radius: 5px;
+    filter:grayscale(1);
+}
+
+.submitbutton {
+  background-color: white;
+  border-radius: 4px;
   border: none;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   color: #660000;
   cursor: pointer;
-  display: block;
-  font-family: Poppins;
-  font-size: 16px;
-  margin: auto;
-
   padding: 15px 20px;
   text-align: center;
   text-decoration: none;
@@ -283,19 +407,96 @@ input[type="submit"] {
   width: 150px;
 }
 
-input[type="submit"]:hover {
+.submitbutton:hover {
   color: white;
   background-color: #660000;
 }
 
-.form_container {
-  background-color: #f8f8f8;
-  border-radius: 5px;
-  margin: 30px;
-  max-width: 500px;
-  padding: 20px;
+.submitbutton-quiz {
+  background-color: white;
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  color: #660000;
+  cursor: pointer;
+  padding: 15px 20px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 150px;
 }
 
+.submitbutton-quiz:hover {
+  color: white;
+  background-color: black;
+}
+
+.submitbuttoncontainer {
+  display: flex;
+  align-items: center;
+}
+
+.quizform {
+  border: 4px solid #660000;
+  padding: 30px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.answers {
+    margin: 10px 10px 10px 40px;
+    font-size: 20px;
+}
+
+.quizquestions {
+  border-bottom: 4px solid #660000;
+  padding: 25px;
+}
+
+.details {
+  background-color: #660000;
+  padding: 30px;
+  color: #fff;
+  font-size: 22px;
+}
+
+#thankyoumessage {
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+/* Movies page container */
+.wrapper1 {
+padding: 50px 120px;
+}
+
+.columns {
+  display: flex;
+}
+
+.col {
+  /* margin: 0 15px 30px; */
+  background: none;
+
+
+}
+
+.col-50 {
+  width: 50%;
+  margin-right: 50px;
+  margin-bottom: 20px;
+}
+
+.col-left {
+  width: 50%;
+  margin-right: 50px;
+}
+
+iframe {
+  width: 100%;
+  height: 320px;
+}
+/* Footer CSS */
 
 footer {
   background-color: black;
@@ -306,4 +507,86 @@ footer {
   letter-spacing: 4px;
   padding: 40px;
   text-align: center;
+}
+
+@media (max-width: 800px) {
+ .twocolumn {
+   flex-direction: column;
+ }
+
+ .colnew {
+     flex: 100%;
+     max-width: 100%;
+ }
+
+}
+
+@media (max-width: 800px) {
+ .wrapper1 {
+padding: 15px 50px;
+margin-right: 0px;
+}
+
+.movies a img {
+  margin-bottom: 15px;
+}
+
+.countdown {
+  position: relative;
+    justify-content: center;
+    right: 0;
+    bottom: 130px;
+    text-align: center;
+}
+
+h1.spookyquote {
+  font-size: 1.5em;
+text-align: center;
+}
+
+#countdowntimer {
+  font-size: 1em;
+  text-align: center;
+}
+  .columns {
+    max-width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .col-50 {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .col-left, .col-right {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .carouselimages {
+    width: 100%;
+    height: 250px;
+  }
+
+  .carouselimages ul, .carouselimages img {
+    height: 480px;
+    width: 600px;
+  }
+
+.news {
+  display: block;
+}
+
+.story {
+  display: block;
+  flex-direction: row;
+  width: 100%;
+}
+
+.story-img {
+  width: 100%;
+  max-height: 300px;
+}
+
+
 }
