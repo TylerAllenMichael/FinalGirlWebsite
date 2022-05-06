@@ -3,8 +3,10 @@
 
 <head>
   <meta charset="utf-8">
+  <!-- Stylesheets and JS -->
   <link rel="stylesheet" href="styles.css">
-  <script defer src="main.js" charset="utf-8"></script>
+  <script defer src="./javascript/hamburger.js" charset="utf-8"></script>
+  <script defer src="./javascript/rts.js" charset="utf-8"></script>
 
   <!-- Fonts from Google -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,7 +15,9 @@
   <title>Rules to Survive | Final Girl</title>
 </head>
 
+<!-- Body -->
 <body>
+  <!-- Navigation -->
   <nav>
     <div class="headercontainer">
       <h1><a href="index.html">Final Girl</a></h1>
@@ -25,39 +29,91 @@
         <a href="survive.html">Rules to Survive</a>
       </div>
 
-    <button class="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-
+      <button class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </nav>
-<main>
-  <div class="pagebanners">
-    <h1 class="pageheaders">Rules to Survive</h1>
 
-  </div>
+  <!-- Mobile navigation hidden -->
+  <nav class="mobile-nav hide">
+    <a href="movies.html">Movies</a>
+    <a href="characters.html">Characters</a>
+    <a href="quiz.html">Quiz</a>
+    <a href="survive.html">Rules to Survive</a>
+  </nav>
 
-    <div class="wrapper1">
-
-        <div class="rulesintro">
-          <p>In the <em>Scream</em> franchise, there are certain rules that one must abide to or follow to survive a horror movie. All films have specific rules, whether it be a standard slasher, a sequel, a trilogy, a remake, or a requel. </p>
-
-        </div>
-      <div class="">
-        
-      </div>
-
+  <!-- Main content -->
+  <main>
+    <div class="pagebanners">
+      <h1 class="pageheaders">Rules to Survive</h1>
     </div>
 
+    <div class="container">
+      <div id="rulesnavigate" />
+        <div class="rulesintro">
+          <p>
+            In the <em>Scream</em> franchise, there are certain rules that one must abide to or follow to survive a horror movie. All films have specific rules, whether it be a standard slasher, a sequel, a trilogy, a remake, or a requel. Each film has a new set of rules that must be followed to give you the best chance at survival. Select any of the buttons underneath to discover the rules you need to survive a horror film. Will you be able to live until the end or will you fall prey to Ghostface?
+          </p>
+        </div>
 
+        <div class="buttonwrapper">
+          <button class="moviebuttons currently-selected-button" type="button" name="button1">Scream (1996)</button>
+          <button class="moviebuttons" type="button" name="button2">Scream 2</button>
+          <button class="moviebuttons" type="button" name="button3">Scream 3</button>
+          <button class="moviebuttons" type="button" name="button4">Scream 4</button>
+          <button class="moviebuttons" type="button" name="button5">Scream 5 (2022)</button>
+        </div>
 
+        <select class="moviedropdown">
+          <option class="moviedropwdownitem" type="button" value="button1">Scream (1996)</option>
+          <option class="moviedropwdownitem" type="button" value="button2">Scream 2</option>
+          <option class="moviedropwdownitem" type="button" value="button3">Scream 3</option>
+          <option class="moviedropwdownitem" type="button" value="button4">Scream 4</option>
+          <option class="moviedropwdownitem" type="button" value="button5">Scream 5 (2022)</option>
+        </select>
 
-</main>
-<footer>
-  <h5>Copyright © 2022 Tyler Lerch. All rights reserved.</h5>
-</footer>
+        <div id="rtsscream-button1" class="rtsscream">
+          <h1>Rule 1: You can never have sex!</h1>
+          <h1>Rule 2: You can never drink or do drugs.</h1>
+          <h1>Rule 3: Never ever under any circumstances say "I'll be right back" because you won't.</h1>
+        </div>
+
+        <div id="rtsscream-button2" class="rtsscream hide">
+          <h1>Rule 1: The body count is always higher.</h1>
+          <h1>Rule 2: The death scenes are always much more elaborate. More blood, more gore.</h1>
+          <h1>Rule 3: Never, ever, under any circumstances assume the killer is dead.</h1>
+        </div>
+
+        <div id="rtsscream-button3" class="rtsscream hide">
+          <h1>Rule 1: You got a killer who's going to be superhuman. Stabbing him won't work. Shooting him won't work. Basically in the third one you gotta cryogenically freeze his head, decapitate him, or blow him up.</h1>
+          <h1>Rule 2: Anyone including the main character can die.</h1>
+          <h1>Rule 3: The past will come back to bite you in the ass. Whatever you think you know about the past, forget it. The past is not at rest.</h1>
+        </div>
+
+        <div id="rtsscream-button4" class="rtsscream hide">
+          <h1>Rule 1: Don't fuck with the original</h1>
+          <h1>Rule 2: The death scenes have to be more extreme.</h1>
+          <h1>Rule 3: Unexpected is the new cliche.</h1>
+          <h1>Rule 4: Virgins can die now.</h1>
+          <h1>Rule 5: New versions are always 2.0, so the latest technology is always involved and integral to the plot. This means the killer may start filming the murders.</h1>
+          <h1>Rule 6: If you want to survive in a modern day horror movie, you pretty much have to be gay.</h1>
+        </div>
+
+        <div id="rtsscream-button5" class="rtsscream hide">
+          <h1>Rule 1: Never trust the love interest.</h1>
+          <h1>Rule 2: The killer's motive is always connected to something in the past.</h1>
+          <h1>Rule 3: The first victim always has a friend group that the killer is always part of.</h1>
+        </div>
+      </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <h5>Copyright © 2022 Tyler Lerch. All rights reserved.</h5>
+  </footer>
 
 </body>
 

@@ -3,9 +3,10 @@
 
 <head>
   <meta charset="utf-8">
+  <!-- Stylesheets and JS -->
   <link rel="stylesheet" href="styles.css">
-  <script defer src="quiz.js"></script>
-
+  <script defer src="./javascript/quiz.js"></script>
+  <script defer src="./javascript/hamburger.js" charset="utf-8"></script>
 
   <!-- Fonts from Google -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,7 +15,9 @@
   <title>Quiz | Final Girl</title>
 </head>
 
+<!-- Body -->
 <body>
+  <!-- Navigation -->
   <nav>
     <div class="headercontainer">
       <h1><a href="index.html">Final Girl</a></h1>
@@ -31,19 +34,26 @@
         <span></span>
         <span></span>
       </button>
-
     </div>
-
   </nav>
+
+  <!-- Mobile Nav Hidden -->
+  <nav class="mobile-nav hide">
+    <a href="movies.html">Movies</a>
+    <a href="characters.html">Characters</a>
+    <a href="quiz.html">Quiz</a>
+    <a href="survive.html">Rules to Survive</a>
+  </nav>
+
+  <!-- Main Content -->
   <main>
     <div class="pagebanners">
       <h1 class="pageheaders">The Scream Quiz</h1>
     </div>
-    <div class="wrapper1">
 
+    <!-- Quiz -->
+    <div class="container">
       <form class="quizForm">
-
-
         <div class="quizquestions">
           <h3>1. What is the name of the killer in Scream?</h3>
           <div class="answers">
@@ -63,6 +73,7 @@
             <label for="1D">Michael Myers</label>
           </div>
         </div>
+
         <div class="quizquestions">
           <h3>2. Who was the first victim in Scream?</h3>
           <div class="answers">
@@ -82,6 +93,7 @@
             <label for="2D">Cotton Weary</label>
           </div>
         </div>
+
         <div class="quizquestions">
           <h3>3. What is Sidney's last name?</h3>
           <div class="answers">
@@ -101,6 +113,7 @@
             <label for="3D">Weary</label>
           </div>
         </div>
+
         <div class="quizquestions">
           <h3>4. What is the killer's choice of weapon?</h3>
           <div class="answers">
@@ -120,6 +133,7 @@
             <label for="4D">Machete</label>
           </div>
         </div>
+
         <div class="quizquestions">
           <h3>5. What object falls out of Billy's pocket that makes Sidney suspicious?</h3>
           <div class="answers">
@@ -139,6 +153,7 @@
             <label for="5D">A cell phone</label>
           </div>
         </div>
+
         <div class="quizquestions">
           <h3>6. What is the name of Sidney's best friend?</h3>
           <div class="answers">
@@ -158,6 +173,7 @@
             <label for="6D">Randy</label>
           </div>
         </div>
+
         <div class="quizquestions">
           <h3>7. What is the killer's favourite question to ask his victims?</h3>
           <div class="answers">
@@ -177,6 +193,7 @@
             <label for="7D">Do you get scared easily?</label>
           </div>
         </div>
+
         <div class="quizquestions">
           <h3>8. What is Gale's job?</h3>
           <div class="answers">
@@ -196,6 +213,7 @@
             <label for="8D">Sheriff</label>
           </div>
         </div>
+
         <div class="quizquestions">
           <h3>9. What is the name of the fictional town the movie takes place?</h3>
           <div class="answers">
@@ -215,6 +233,7 @@
             <label for="9D">Crystal Lake</label>
           </div>
         </div>
+
         <div class="quizquestions">
           <h3>10. Who is the final character to die in Scream?</h3>
           <div class="answers">
@@ -235,24 +254,26 @@
           </div>
         </div>
 
+        <!-- Details and submit -->
         <div class="details">
-          <div class="submit">
-
-
-          </div>
-
-
+          <div class="submit"></div>
           <input class="submitbutton-quiz" type="submit" name="" value="submit">
-          <br>
-          <div id="resultText"> </div>
         </div>
-
-
       </form>
-
     </div>
 
+    <!-- Modal -->
+    <div class="bg-modal hide">
+      <div class="modal-content">
+        <div class="close">+</div>
+        <img class"hide" id="winimg" src="./images/yousurvived.png" alt="">
+        <img class="hide" id="loseimg" src="./images/avatarscream1.png" alt="">
+        <div id="resultText">Thanks for your message!</div>
+      </div>
+    </div>
   </main>
+
+  <!-- Footer -->
   <footer>
     <h5>Copyright © 2022 Tyler Lerch. All rights reserved.</h5>
   </footer>

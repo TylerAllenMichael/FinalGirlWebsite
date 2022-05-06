@@ -3,12 +3,19 @@
 
 <head>
   <meta charset="utf-8">
+  <!-- Stylesheets and JS -->
+  <link rel="stylesheet" href="imagehover.css">
   <link rel="stylesheet" href="styles.css">
-  <script defer src="main.js" charset="utf-8"></script>
+  <script defer src="./javascript/hamburger.js" charset="utf-8"></script>
+
+  <!-- Fonts from Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300&display=swap" rel="stylesheet">
   <title>Characters</title>
 </head>
 
+<!-- Body -->
 <body>
+  <!-- Navigation -->
   <nav>
     <div class="headercontainer">
       <h1><a href="index.html">Final Girl</a></h1>
@@ -20,26 +27,118 @@
         <a href="survive.html">Rules to Survive</a>
       </div>
 
-    <button class="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+      <button class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
 
+  <!-- Mobile navigation hidden -->
+  <nav class="mobile-nav hide">
+    <a href="movies.html">Movies</a>
+    <a href="characters.html">Characters</a>
+    <a href="quiz.html">Quiz</a>
+    <a href="survive.html">Rules to Survive</a>
+  </nav>
+
+  <!-- Main content -->
+  <main>
+    <div class="pagebanners">
+      <h1 class="pageheaders">Scream Characters</h1>
     </div>
 
-  </nav>
-<main>
-  <div class="pagebanners">
-    <h1 class="pageheaders">Scream Characters</h1>
-  </div>
+    <div class="container">
+      <div class="flexcontainer">
+        <figure class="innerbox imghvr-shutter-out-horiz"> <img src="./images/sidneyp.png" alt="">
+          <figcaption>
+            <h3>Sidney Prescott</h3>
+            <p>Status: Alive</p>
+            <button class="readbutton">Read more</button>
+          <a href="https://scream.fandom.com/wiki/Sidney_Prescott"></a>
+          </figcaption>
 
+        </figure>
+        <figure class="innerbox imghvr-shutter-out-horiz"><img src="./images/billy.png" alt="">
+          <figcaption>
+            <h3>Billy Loomis</h3>
+            <p>Status: Deceased</p>
+            <button class="readbutton">Read more</button>
+            <a href="https://scream.fandom.com/wiki/Billy_Loomis"></a>
+          </figcaption>
 
+        </figure>
+        <figure class="innerbox imghvr-shutter-out-horiz"><img src="./images/stu.png" alt="">
+          <figcaption>
+            <h3>Stu Macher</h3>
+            <p>Status: Deceased</p>
+            <button class="readbutton">Read more</button>
+            <a href="https://scream.fandom.com/wiki/Stu_Macher"></a>
+          </figcaption>
 
-</main>
-<footer>
-  <h5>Copyright © 2022 Tyler Lerch. All rights reserved.</h5>
-</footer>
+        </figure>
+        <figure class="innerbox imghvr-shutter-out-horiz"><img src="./images/dewey.png" alt="">
+          <figcaption>
+            <h3>Dewey Riley</h3>
+            <p>Status: Deceased</p>
+            <button class="readbutton">Read more</button>
+            <a href="https://scream.fandom.com/wiki/Dewey_Riley"></a>
+          </figcaption>
+
+        </figure>
+        <figure class="innerbox imghvr-shutter-out-horiz"><img src="./images/tatum.png" alt="">
+          <figcaption>
+            <h3>Tatum Riley</h3>
+            <p>Status: Deceased</p>
+            <button class="readbutton">Read more</button>
+            <a href="https://scream.fandom.com/wiki/Tatum_Riley"></a>
+          </figcaption>
+
+        </figure>
+        <figure class="innerbox imghvr-shutter-out-horiz"><img src="./images/gale.png" alt="">
+          <figcaption>
+            <h3>Gale Weathers</h3>
+            <p>Status: Alive</p>
+            <button class="readbutton">Read more</button>
+            <a href="https://scream.fandom.com/wiki/Gale_Weathers"></a>
+          </figcaption>
+
+        </figure>
+        <figure class="innerbox imghvr-shutter-out-horiz"><img src="./images/kenny.png" alt="">
+          <figcaption>
+            <h3>Kenny Brown</h3>
+            <p>Status: Deceased</p>
+            <button class="readbutton">Read more</button>
+            <a href="https://scream.fandom.com/wiki/Kenny_Brown"></a>
+          </figcaption>
+
+        </figure>
+        <figure class="innerbox imghvr-shutter-out-horiz"><img src="./images/casey.png" alt="">
+          <figcaption>
+            <h3>Casey Becker</h3>
+            <p>Status: Deceased</p>
+            <button class="readbutton">Read more</button>
+            <a href="https://scream.fandom.com/wiki/Casey_Becker"></a>
+          </figcaption>
+
+        </figure>
+        <figure class="innerbox imghvr-shutter-out-horiz"><img src="./images/randy.png" alt="">
+          <figcaption>
+            <h3>Randy Meeks</h3>
+            <p>Status: Deceased</p>
+            <button class="readbutton">Read more</button>
+            <a href="https://scream.fandom.com/wiki/Randy_Meeks"></a>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <h5>Copyright © 2022 Tyler Lerch. All rights reserved.</h5>
+  </footer>
 
 </body>
 

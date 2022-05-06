@@ -1,7 +1,5 @@
-/* Final Girl Website - Tyler */
-
+/* Final Girl Website */
 /* Import custom fonts */
-
 @font-face {
   font-family: 'Scream';
   src: url(fonts/scream-real.regular.ttf);
@@ -13,53 +11,51 @@
 }
 
 /* Universal styles */
-
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: white;
-
 }
 
 main {
   margin-top: 86.4px;
 }
 
-h1 {
-  font-family: 'Scream';
-}
-
-h1 a:hover {
-  color: #660000;
-}
-
-h1, h5 {
-  font-weight: 100;
-}
-
-/* .screamheaders {
+h1, h2, h3, h5 {
   font-weight: 100;
   font-family: 'Scream';
-  font-size: 32px;
-} */
+  letter-spacing: 4px;
+}
+
+.container h1, .container h2, .container h3 {
+  color: black;
+}
+
+.herocontainer h1, .herocontainer h2, .herocontainer h3 {
+  color: white;
+}
 
 h2 {
-  font-weight: 100;
-  font-family: 'Scream';
   font-size: 32px;
 }
 
 h3 {
-  font-weight: 100;
-  font-family: 'Scream';
   font-size: 26px;
 }
 
-p{
+h5 {
+  color: white;
+}
+
+p {
   font-size: 20px;
   font-family: 'Heebo';
 }
@@ -72,7 +68,7 @@ em {
   font-size: 45px;
 }
 
-.scream2, .scream4 {
+.greybkg {
   background: lightgrey;
 }
 
@@ -82,8 +78,8 @@ em {
 }
 
 .colnew {
-    flex: 50%;
-    max-width: 50%;
+  flex: 50%;
+  max-width: 50%;
 }
 
 .twocolumn {
@@ -97,11 +93,10 @@ em {
 }
 
 .container {
-  padding: 50px 120px;
+  padding: 50px 100px;
 }
 
 /*Header styling*/
-
 nav {
   position: fixed;
   height: 86.4px;
@@ -124,25 +119,24 @@ nav {
 .headercontainer a {
   font-family: 'Scream';
   letter-spacing: 4px;
-  text-decoration: none;
   color: white;
+  text-decoration: none;
 }
 
-.logo{
-  font-weight:100;
+.headercontainer a:hover {
+  color: #660000;
 }
 
+/* Navigation CSS */
 .navmenu {
   display: none;
   justify-content: flex-end;
   margin: 0px -16px;
-
 }
 
 .navmenu a {
   border-radius: 99px;
   color: white;
-  /* margin: 0 16px; */
   font-weight: 300;
   padding: 8px 16px;
   text-decoration: none;
@@ -179,7 +173,6 @@ nav {
 
 .hamburger:hover span:nth-child(2) {
   transform: translateX(10px);
-
 }
 
 .hamburger.isactive span:nth-child(1) {
@@ -195,25 +188,42 @@ nav {
   transform: translate(-3px, 3px) rotate(-45deg);
 }
 
-.hamburger:hover span{
+.hamburger:hover span {
   background-color: #660000;
 }
 
-@media (min-width: 1100px) {
-  .hamburger {
-    display: none;
-  }
-  .navmenu {
-    display: block;
-  }
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 98;
+  background-color: rgba(0, 0, 0, 0.95);
+  padding-top: 120px;
 }
 
-.hide {
-  display: none;
+.mobile-nav a {
+  font-family: 'Scream';
+  width: 100%;
+  margin: 0 0 16px;
+  text-align: center;
+  padding: 12px 16px;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  border: 2px solid;
+}
+
+.mobile-nav a:hover {
+  background: #660000;
 }
 
 /* Hero container css */
-
 .herocontainer {
   background-image: url('./images/mask.png');
   background-position: center;
@@ -234,13 +244,6 @@ nav {
   width: 350px;
 }
 
-.spookyquote {
-  font-family: 'Scream';
-  color: white;
-  letter-spacing: 4px;
-  font-weight: 100;
-}
-
 .countdown {
   display: flex;
   justify-content: flex-end;
@@ -256,7 +259,6 @@ nav {
   align-items: center;
   color: white;
   font-family: 'Scream2';
-  font-weight: 100;
   height: 100px;
   width: 100%;
   background-color: #660000;
@@ -265,18 +267,14 @@ nav {
 /* Welcome container css */
 .pagebanners {
   background-color: black;
+  display: flex;
+  align-items: center;
   text-align: center;
-  padding: 7rem;
+  justify-content: center;
+  padding: 0 40px;
   height: 300px;
   color: white;
   border-bottom: 5px solid #660000;
-}
-
-/* Welcome container css */
-.welcomemessage {
-  font-family:'Scream';
-  display: flex;
-  justify-content: center;
 }
 
 .carouselimages, .carouselimages ul, .carouselimages img {
@@ -299,7 +297,11 @@ nav {
   margin: 2px;
 }
 
-#movie1:hover, #movie2:hover, #movie3:hover, #movie4:hover, #movie5:hover {
+#movie1:hover,
+#movie2:hover,
+#movie3:hover,
+#movie4:hover,
+#movie5:hover {
   transform: scale(1.15);
   transition: 1s;
 }
@@ -317,10 +319,6 @@ nav {
   margin-bottom: 50px;
 }
 
-/* 1st, 4th story should be on the left,
-   2nd, 5th story should be in the center,
-   3rd, 6th story should be on the right
-   This will give us a feeling of space between them */
 .story:nth-child(3n+1) {
   align-items: flex-start;
 }
@@ -359,12 +357,7 @@ nav {
   width: 100%;
 }
 
-/* Contact container CSS */
-.contactcontainer {
-  background-color: lightgrey;
-  font-size: 16px;
-}
-
+/* Contact container and button CSS */
 .aboutus p {
   font-size: 25px;
 }
@@ -379,21 +372,18 @@ nav {
 .forminput {
   border: 1px solid lightgrey;
   border-radius: 5px;
-  box-sizing: border-box;
   margin-top: 4px;
   margin-bottom: 20px;
   padding: 15px;
-  resize: vertical;
   width: 100%;
   font-family: 'Heebo', sans-serif;
 }
 
-input[type="radio" i] {
-
-    filter:grayscale(1);
+input[type="radio"] {
+  filter: grayscale(1);
 }
 
-.submitbutton {
+.submitbutton, .submitbutton-quiz {
   background-color: white;
   border-radius: 4px;
   border: none;
@@ -407,23 +397,25 @@ input[type="radio" i] {
   width: 150px;
 }
 
-.submitbutton:hover {
+.moviebuttons {
+  background-color: black;
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  color: white;
+  cursor: pointer;
+  padding: 15px 20px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'Scream';
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+.submitbutton:hover, .moviebuttons:hover {
   color: white;
   background-color: #660000;
-}
-
-.submitbutton-quiz {
-  background-color: white;
-  border-radius: 4px;
-  border: none;
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  color: #660000;
-  cursor: pointer;
-  padding: 15px 20px;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  width: 150px;
 }
 
 .submitbutton-quiz:hover {
@@ -436,16 +428,44 @@ input[type="radio" i] {
   align-items: center;
 }
 
-.quizform {
-  border: 4px solid #660000;
-  padding: 30px;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+/* Modal css */
+.bg-modal {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.modal-content {
+  width: 490px;
+  height: 300px;
+  background-color: white;
+  border-radius: 4px;
+  text-align: center;
+  padding: 40px;
+  margin: 20px;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 0;
+  right: 24px;
+  font-size: 42px;
+  font-weight: bold;
+  cursor: pointer;
+  transform: rotate(45deg);
+}
+
+/* Quiz css */
 .answers {
-    margin: 10px 10px 10px 40px;
-    font-size: 20px;
-    font-family: 'Heebo'
+  margin: 10px 10px 10px 40px;
+  font-size: 20px;
+  font-family: 'Heebo'
 }
 
 .quizquestions {
@@ -467,8 +487,10 @@ input[type="radio" i] {
 }
 
 /* Movies page container */
-.wrapper1 {
-padding: 50px 120px;
+.buttonwrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .columns {
@@ -476,10 +498,7 @@ padding: 50px 120px;
 }
 
 .col {
-  /* margin: 0 15px 30px; */
   background: none;
-
-
 }
 
 .col-50 {
@@ -497,58 +516,133 @@ iframe {
   width: 100%;
   height: 320px;
 }
-/* Footer CSS */
 
+/* Footer CSS */
 footer {
   background-color: black;
   border-bottom: 5px solid #660000;
-  color: white;
-  font-family: 'Scream';
   height: 120px;
-  letter-spacing: 4px;
   padding: 40px;
   text-align: center;
 }
 
-@media (max-width: 800px) {
- .twocolumn {
-   flex-direction: column;
- }
-
- .colnew {
-     flex: 100%;
-     max-width: 100%;
- }
-
+/* Survive CSS */
+.rulesintro {
+  margin: 40px 0;
 }
 
-@media (max-width: 800px) {
- .wrapper1 {
-padding: 15px 50px;
-margin-right: 0px;
+.currently-selected-button {
+  background-color: #660000;
 }
 
-.movies a img {
-  margin-bottom: 15px;
+#resultText {
+  font-family: 'Scream';
+  font-size: 18px;
+  font-weight: bolder;
 }
 
-.countdown {
-  position: relative;
+/* Rules css */
+.rtsscream {
+  margin: 55px 0;
+}
+
+.rtsscream h1 {
+  margin: 55px 0;
+}
+
+.flexcontainer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Characters page css styles */
+
+[class^='imghvr-']::before, [class*=' imghvr-']::before, [class^='imghvr-'] figcaption,
+[class*=' imghvr-'] figcaption {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.innerbox {
+  margin: 40px 40px;
+}
+
+.innerbox img {
+  width: 300px;
+  height: 300px;
+}
+
+[class^="imghvr-"] button, [class*=" imghvr-"] button {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  border: 2px solid white;
+  color: white;
+  background: none;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.moviedropdown {
+  display: none;
+}
+
+/* CSS for responsivenesss */
+@media (min-width: 1100px) {
+  .hamburger {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: none;
+  }
+
+  .navmenu {
+    display: block;
+  }
+}
+
+@media (max-width: 1100px) {
+  .movies {
+    justify-content: center;
+  }
+
+  .movies a img {
+    margin: 15px;
+  }
+
+  .herocontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .countdown {
+    position: relative;
     justify-content: center;
     right: 0;
     bottom: 130px;
     text-align: center;
-}
+    max-width: 480px;
+  }
 
-h1.spookyquote {
-  font-size: 1.5em;
-text-align: center;
-}
+  h1.spookyquote {
+    font-size: 1.5em;
+    text-align: center;
+    justify-content: center;
+  }
 
-#countdowntimer {
-  font-size: 1em;
-  text-align: center;
-}
+  h2 {
+    text-align: center;
+  }
+
+  #countdowntimer {
+    font-size: 1em;
+    text-align: center;
+  }
+
   .columns {
     max-width: 100%;
     flex-wrap: wrap;
@@ -564,30 +658,81 @@ text-align: center;
     margin-right: 0;
   }
 
-  .carouselimages {
+  .news {
+    display: flex;
+    justify-content: center;
+  }
+
+  .story {
+    display: block;
+    flex-direction: row;
+    width: 400px;
+    margin: 20px;
+  }
+
+  .story-img {
+    width: 400px;
+    max-height: 300px;
+    background-size: cover;
+  }
+
+  .submitbutton {
     width: 100%;
-    height: 250px;
   }
 
-  .carouselimages ul, .carouselimages img {
-    height: 480px;
-    width: 600px;
+  .spookyquotecontainer {
+    padding: 0;
+  }
+}
+
+@media (max-width: 940px) {
+  .buttonwrapper {
+    justify-content: center;
   }
 
-.news {
-  display: block;
+  .moviebuttons {
+    margin-right: 20px;
+  }
 }
 
-.story {
-  display: block;
-  flex-direction: row;
-  width: 100%;
+@media (max-width: 800px) {
+  .twocolumn {
+    flex-direction: column;
+  }
+
+  .colnew {
+    flex: 100%;
+    max-width: 100%;
+  }
+
+
 }
 
-.story-img {
-  width: 100%;
-  max-height: 300px;
+@media (max-width: 670px) {
+  .carouselimages, .carouselimages ul, .carouselimages li {
+    width: 300px;
+  }
 }
 
+@media (max-width: 640px) {
+  .buttonwrapper {
+    display: none;
+  }
 
+  .moviedropdown {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    font-family: 'Scream';
+    text-align: center;
+  }
+
+  .innerbox {
+    margin: 40px 0;
+  }
+}
+
+/* CSS for hiding */
+.hide {
+  display: none;
 }
